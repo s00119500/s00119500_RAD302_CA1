@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using s00119500.Models;
+using s00119500.DAL;
 
 namespace s00119500.Controllers
-{
-    
-
+{ 
     public class HomeController : Controller
     {
-        
+        private InterfaceTripRepository _IR;
+
+        public HomeController(InterfaceTripRepository ir) //need to make iterface public
+        {
+            _IR = ir;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            return View(_IR.DisplayAllTrips());
         }
 
         //
