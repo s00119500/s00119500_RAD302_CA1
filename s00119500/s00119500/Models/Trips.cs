@@ -18,8 +18,8 @@ namespace s00119500.Models
         public DateTime endDate { get; set; }
         public int minimunNumberOfGuests { get; set; } // min amount required to be valid
 
-        public List<Legs> legs { get; set; }
-        public List<Guest> totalAssociatedGuests { get; set; }
+        //public List<Legs> legs { get; set; }
+        //public List<Guest> totalAssociatedGuests { get; set; }
     }
 
     public class Legs : Trips
@@ -33,7 +33,8 @@ namespace s00119500.Models
         public string endLocation { get; set; }   // city name 
         public DateTime legStartDate { get; set; }
         public DateTime legEndDate { get; set; }
-        public List<Guest> legsAssociatedGuests{ get; set; }
+
+        //public List<Guest> legsAssociatedGuests{ get; set; }
     }
 
     public class Guest
@@ -42,5 +43,6 @@ namespace s00119500.Models
         //[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         //public int GuestId { get; set; }
         public string Name { get; set; }
+        public int MyProperty { get; set; }
     }
 }//name
